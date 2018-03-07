@@ -1,11 +1,11 @@
 <script>
-var mostra = function(frase){
+var mostra = function(frase){ //crair funções * var nome_função = function(parâmetros) { *
 	document.write(frase + "<BR>");
 };
 
 var calculaIMC = function(altura,peso) {
 var imc = peso / (altura*altura);
-mostra("IMC calculado é" + imc);
+mostra("IMC calculado é " + imc);
 };
 
 var peso = 75;
@@ -13,6 +13,6 @@ var altura = 1.72;
 var imc = peso / (altura * altura);
 mostra("meu IMC é: " + imc);
 
-calcuclaIMC( altura,peso);
+calculaIMC( altura,peso);
 
 </script>
