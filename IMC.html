@@ -1,18 +1,29 @@
 <script>
-var mostra = function(frase){ //crair funções * var nome_função = function(parâmetros) { *
+//criar funções * var nome_função = function(parâmetros) { *
+	var mostra = function(frase){ //função "mostra", imprime na página e pula uma linha. 
 	document.write(frase + "<BR>");
 };
 
 var calculaIMC = function(altura,peso) {
 var imc = peso / (altura*altura);
-mostra("IMC calculado é " + imc);
+//mostra("IMC calculado é " + imc);
+return imc; //Nesse caso o valor do imc é "guardado" na função imc e não mostrado.
 };
 
-var peso = 75;
-var altura = 1.72;
-var imc = peso / (altura * altura);
-mostra("meu IMC é: " + imc);
+var nome = prompt("Digite o seu nome");//O comando prompt serve como um printf e um scanf juntos, quando utilizado junto a uma variável.
+var peso = prompt("Digite o seu peso em kg");
+var altura = prompt("Digite a sua altuta em m");
+var imc = calculaIMC(altura, peso); // Utilizamos o valor guardado da função aqui também.
+mnostra("O meu imc é " + imc);
+//var imc = peso / (altura * altura);
+//mostra("meu IMC é: " + imc);
+//calculaIMC( altura,peso);
 
-calculaIMC( altura,peso);
+var pesoDoPrimo = 83;
+var alturaDoPrimo = 1.76;
+var imcDoPrimo = calculaIMC(alturaDoPrimo, pesoDoPrimo);//O valor guardado de imc será utilizado agora.
+mostra("O imc do meu primo é " + imcDoPrimo);
+mostra("Ele ainda está " + (imcDoPrimo - 18.5) + "pontos acima do limite da magreza");
 
+	
 </script>
