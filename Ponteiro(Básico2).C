@@ -1,24 +1,18 @@
-//Outro exemplo de ponteiro( É necessário o uso da biblioteca stdlib.h);
-#include<stdio.h>
+#include <stdio.h>
 #include<stdlib.h>
-
-
-
+#include<math.h>
+//Um ponteiro é uma variável capaz de armazenar um endereço de memória ou o endereço de uma variável
+//Um ponteiro salva apenas o enderço de memória alocado para salvar a variável
 int main(){
-	int valor;
-	//Declaração do ponteiro
-	printf("Digite o número a ser guardado:\n");
-	
-	scanf("%d",&valor);
-	
-	
-	int*ptr; //É usado no caso um "*" para definir um ponteiro
-	//Atribuindo o endereço da variável valor ao ponteiro
-	
-	ptr = &valor; //Lê-se que o ponteiro recebe a variável valor
+	//Exemplo de ponteiro
+	int a, b, c;
+	int*ptr; //Declara um ponteiro para um inteiro
+	          //Um ponteiro para uma variável do tipo inteiro
+	a = 90;
+	b = 2;
+	c = 3;
+	ptr = &a; //Diz-se que o ponteiro recebe o valor de a
+	printf("Valor do ponteiro: %p, Conteudo do ponteiro: %d\n",ptr,*ptr);
 
-	printf("Conteudo da variavel valor: %d\n", valor);
-	printf("Endereco da variavel valor: %x \n",&valor);//Notação para imprimir o endereço
-	printf("Conteudo da variavel ponteiro ptr: %x", ptr); //Irá imprimir o endereço da variável valor
-return 0;	 
+	return 0;
 }
