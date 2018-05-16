@@ -1,0 +1,19 @@
+<script>
+function resto(num1, num2){
+	var sobra = num1%num2;
+	return sobra;
+}
+
+var dividendo;
+var divisor =1;
+
+dividendo = parseInt(prompt("Digite um valor para ser dividido:"));
+
+while(divisor <= dividendo){
+	if(resto(dividendo,divisor) == 0){
+		document.write(divisor+" eh divisor de "+dividendo+"<BR>");
+	}
+	divisor = divisor +1;
+}
+
+</script>
