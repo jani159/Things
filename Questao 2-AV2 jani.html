@@ -1,14 +1,17 @@
+//Criar função resto e mostrar divisores de um numero
+
 <script>
+//Declaração de Funções
 function resto(num1, num2){
 	var sobra = num1%num2;
 	return sobra;
 }
-
+//Declaração de variáveis
 var dividendo;
 var divisor =1;
-
+//Entradas
 dividendo = parseInt(prompt("Digite um valor para ser dividido:"));
-
+//Processamento e Saída
 while(divisor <= dividendo){
 	if(resto(dividendo,divisor) == 0){
 		document.write(divisor+" eh divisor de "+dividendo+"<BR>");
