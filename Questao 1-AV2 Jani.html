@@ -1,17 +1,20 @@
+//Gerar 50 números inteiros, armazená-los em um vetor V e mostrá-los, exibir a soma e a média desses valores.
+
 <meta charset="UTF-8">
 <script>
+//Declaração de variáveis
 var v = [];
 var contv = 0;
 var soma = 0;
 var media;
-
+//Processamento
 while(contv < 50){
 	v[contv] = parseInt(Math.random()*100);
 	document.write("V["+contv+"] = "+v[contv]+"<BR>");
 	soma = soma +v[contv];
 	contv = contv +1;
 }
-
+//Saída
 document.write("A soma dos valores gerados eh igual a igual a: "+soma+"<BR>");
 document.write("A media dos valores gerados eh igual a igual a: "+soma/50+"<BR>");
 
