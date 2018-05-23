@@ -1,0 +1,61 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var max_linhas = 5;
+var max_colunas = 4;
+
+document.write("<marquee>GERANDO UMA MATRIZ ALEATORIA</marquee>");
+ 
+ // Definindo uma matriz 
+ var m = new Array (max_linhas);
+ 
+ for (l = 0; l < max_linhas ; l++) 	{
+		m[l] = new Array(max_colunas); 
+									}
+			
+// preenchendo a matriz 
+document.write("Matriz gerada é: <br>");	
+	for (l = 0; l < max_linhas ; l++) 	{
+		for (c = 0; c < max_colunas ; c++) 	{
+			m[l][c]= parseInt(Math.random()*100);
+			document.write("m [" + l + "] [" + c + "] é " + m[l][c] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+											}
+document.write("<br>");					}
+
+//definindo matriz
+var m2 = new Array (max_linhas);
+ 
+ for (l = 0; l < max_linhas ; l++) 	{
+		m2[l] = new Array(max_colunas); 
+									}
+									
+//Preenchendo a matriz
+document.write("Matriz gerada é: <br>");	
+	for (l = 0; l < max_linhas ; l++) 	{
+		for (c = 0; c < max_colunas ; c++) 	{
+			m2[l][c]= parseInt(Math.random()*100);
+			document.write("m2 [" + l + "] [" + c + "] é " + m2[l][c] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+											}
+
+document.write("<br>"); 				}
+
+			
+//definindo matriz
+var soma = new Array (max_linhas);
+ 
+ for (l = 0; l < max_linhas ; l++) 	{
+		soma[l] = new Array(max_colunas); 
+									}
+									
+//Preenchendo a matriz
+document.write("Matriz gerada é: <br>");	
+	for (l = 0; l < max_linhas ; l++) 	{
+		for (c = 0; c < max_colunas ; c++) 	{
+			soma[l][c]= m[l][c] + m2[l][c];
+			document.write("soma [" + l + "] [" + c + "] é " + soma[l][c] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+											}
+
+document.write("<br>"); 				}
+				
+</script>
