@@ -1,0 +1,90 @@
+<meta charset = "UTF-8">
+<h1> Trabalhando com Matrizes </h1>
+
+<script>
+//Declaração de Função
+function exibirmatriz(Matriz){
+	for(L = 0; L<max_linhas; L++){
+		for(C = 0; C<max_colunas; C++){
+			document.write("matriz["+L+"]["+C+"]="+Matriz[L][C]+"&nbsp; &nbsp; &nbsp;");
+	}
+	document.write("<BR>");
+}
+
+document.write("<BR>");
+}
+//Declaração de variáveis
+var max_linhas = 3;
+var max_colunas = 3;
+
+
+//Declaração da Matriz
+
+//Matriz1
+var matriz = new Array(max_linhas);
+for( i = 0; i < max_linhas; i++){
+	matriz [i] = new Array(max_colunas);
+}
+//Matriz2
+var matriz2 = new Array(max_linhas);
+for(i = 0; i<max_linhas; i++){
+	matriz2 [i] = new Array(max_colunas);
+}
+//Matriz Soma
+var matriz_soma = new Array(max_linhas);
+for(i = 0; i<max_linhas; i++){
+	matriz_soma [i] = new Array(max_colunas);
+}
+
+//Preenchimento da Matriz
+for(i = 0; i < max_linhas; i++){
+	for(c=0; c < max_colunas; c++){
+		matriz[i][c] = parseInt(Math.random()*100);
+	}
+}
+
+for(i = 0; i<max_linhas; i++){
+	for(c = 0; c<max_colunas; c++){
+		matriz2[i][c] = parseInt(Math.random()*100);
+	}
+}
+
+//Soma
+for(i=0;i<max_linhas;i++){
+	for(c=0; c<max_colunas;c++){
+		matriz_soma[i][c] = matriz[i][c] + matriz2[i][c];
+	}
+}
+	
+//Exibição da Matriz
+exibirmatriz (matriz);
+exibirmatriz (matriz2);
+exibirmatriz (matriz_soma);
+
+/*for(i = 0; i< max_linhas; i++){
+	for(c = 0; c< max_colunas; c++){
+		document.write("matriz["+i+"]["+c+"]="+matriz[i][c]+"&nbsp; &nbsp; &nbsp;");
+	}
+	document.write("<BR>");
+}
+
+document.write("<BR>");
+*/
+/*for(i = 0; i< max_linhas; i++){
+	for(c = 0; c< max_colunas; c++){
+		document.write("matriz2["+i+"]["+c+"]="+matriz2[i][c]+"&nbsp; &nbsp; &nbsp;");
+	}
+	document.write("<BR>");
+}
+
+document.write("<BR>");
+*/
+
+/*for(i = 0; i<max_linhas; i++){
+	for(c = 0; c<max_colunas; c++){
+		document.write("matriz soma["+i+"]["+c+"]="+matriz_soma[i][c]+"&nbsp; &nbsp; &nbsp;");
+	}
+	document.write("<BR>");
+}
+*/
+</script>
