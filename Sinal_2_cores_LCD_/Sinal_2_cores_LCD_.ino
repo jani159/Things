@@ -20,17 +20,18 @@ void loop(){
   //Posicionamos o cursor na coluna 3, linha 0
   lcd.setCursor(6,0);
   digitalWrite(led1,HIGH);
-  //delay(300); 
   lcd.print("PARE!");
   delay(3000);
+  
   digitalWrite(led1,LOW);
   delay(300);
   lcd.clear();
+  
   lcd.setCursor(6,0);
   digitalWrite(led2,HIGH);
-  //delay(300);
   lcd.print("SIGA!");
   delay(3000);
+  
   digitalWrite(led2, LOW);
   delay(500);
 }
