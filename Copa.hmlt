@@ -1,0 +1,153 @@
+<meta charset = "UTF-8">
+<script>
+document.write("<h1> Grupo G - COPA DO MUNDO! </h1>");
+
+//Declaração de Funções 
+function pontuacao(x,y,p,v,d,e,z){ //x = Gols time1, y = Gols time2; p = Vetor pontos; v =  Vetor vitoria; d = Vetor derrota; e = Vetor empate; z = Índice vetor pontos
+	if(x>y){
+		p[z] = p[z] + 3;
+		v[z] = v[z] + 1;
+	}
+	else{
+		if(x<y){
+			p[z] = p[z] + 0;
+			d[z] = d[z] + 1;
+			
+		}
+		else{
+			if(x == y){
+				p[z] = p[z] + 1;
+				e[z] = e[z] + 1;
+			}
+		}
+	}
+}
+
+function ordenar(V){
+	for(i=1;i<4;i++){
+		for(j=0;j<i;j++){
+			if(V[i]<V[j]){
+				var c = V[i]; // Variável "c", é uma variável temporária 
+				V[i] = V[j];
+				V[j] = c;
+			}
+		}
+	}
+}
+
+//Declaração de Vetores
+var time =[];
+var jogos = [];
+var gols = []; //Gols Feitos
+var gs = []; //Gols Sofridos
+var saldo = []; //Saldo de Gols
+var pontos =[0,0,0,0];
+var vitoria = [0,0,0,0];
+var derrota = [0,0,0,0];
+var empate = [0,0,0,0];
+//Preenchimento de Vetores
+time = ["Bélgica","Panamá","Tunísia","Inglaterra"];
+
+jogos = [ 
+			[time[0],0," x ",0,time[1]],
+			[time[1],0," x ",0,time[2]],
+			[time[0],0," x ",0,time[2]],
+			[time[1],0," x ",0,time[3]],
+			[time[0],0," x ",0,time[3]],
+			[time[2],0," x ",0,time[3]]
+		];
+		
+//Preenchimento dos Gols
+for(l=0;l<6;l++){
+	for(c=0;c<5;c++){
+		if((c==1) || (c==3)){
+			jogos[l][c] = parseInt(Math.random()*7);
+		}
+	}
+}
+
+//Pontuação Bélgica
+pontuacao(jogos[0][1],jogos[0][3],pontos,vitoria,derrota,empate,0);
+pontuacao(jogos[2][1],jogos[2][3],pontos,vitoria,derrota,empate,0);
+pontuacao(jogos[4][1],jogos[4][3],pontos,vitoria,derrota,empate,0);
+gols[0] = (jogos[0][1]+jogos[2][1]+jogos[4][1]);
+gs[0] = (jogos[0][3]+jogos[2][3]+jogos[4][3]);
+saldo[0] = (gols[0] - gs[0]);
+
+//Pontuação Panamá
+pontuacao(jogos[0][3],jogos[0][1],pontos,vitoria,derrota,empate,1);
+pontuacao(jogos[1][1],jogos[1][3],pontos,vitoria,derrota,empate,1);
+pontuacao(jogos[3][1],jogos[3][3],pontos,vitoria,derrota,empate,1);
+gols[1] = (jogos[0][3]+jogos[1][1]+jogos[3][1]);
+gs[1] = (jogos[0][1]+jogos[1][3]+jogos[3][3]);
+saldo[1] = (gols[1] - gs[1]);
+
+//Pontuação Tunísia
+pontuacao(jogos[1][3],jogos[1][1],pontos,vitoria,derrota,empate,2);
+pontuacao(jogos[2][3],jogos[2][1],pontos,vitoria,derrota,empate,2);
+pontuacao(jogos[5][1],jogos[5][3],pontos,vitoria,derrota,empate,2);
+gols[2] = (jogos[1][3]+jogos[2][3]+jogos[5][1]);
+gs[2] = (jogos[1][1]+jogos[2][1]+jogos[5][3]);
+saldo[2] = (gols[2] - gs[2]);
+
+//Pontuação Inglaterra
+pontuacao(jogos[3][3],jogos[3][1],pontos,vitoria,derrota,empate,3);
+pontuacao(jogos[4][3],jogos[4][1],pontos,vitoria,derrota,empate,3);
+pontuacao(jogos[5][3],jogos[5][1],pontos,vitoria,derrota,empate,3);
+gols[3] = (jogos[3][3]+jogos[4][3]+jogos[5][3]);
+gs[3] = (jogos[3][1]+jogos[4][1]+jogos[5][1]);
+saldo[3] = (gols[3] - gs[3]);
+
+//Ordenamento
+for(i=1;i<4;i++){
+	for(j=0;j<i;j++){
+		if(pontos[i]<pontos[j]){
+		
+			var c = pontos[i]; // Variável "c", é uma variável temporária 
+			var d = time[i]; // Variável "d", é uma variável temporária
+			var f = empate[i]; // Variável "f", é uma variável temporária
+			var g = derrota[i]; // Variável "g", é uma variável temporária
+			var h = gs[i]; // Variável "h", é uma variável temporária
+			var k = saldo[i]; // Variável "k", é uma variável temporária
+			var l = gols[i]; // Variável "l", é uma variável temporária
+			
+			pontos[i] = pontos[j];
+			time[i] = time[j];
+			empate[i] = empate[j];
+			derrota[i] = derrota[j];
+			gs[i] = gs[j];
+			saldo[i] = saldo[j];
+			gols[i] = gols[j]
+			
+			pontos[j] = c;
+			time[j] = d;
+			empate[j] = f;
+			derrota[j] = g;
+			gs[j] = h;
+			saldo[j] = k;
+			gols[j] = l;
+		}
+	}
+}
+
+ordenar(pontos);
+ordenar(vitoria);
+
+//Imprimir 
+for(l=0;l<6;l++){
+	for(c=0;c<5;c++){
+		document.write(jogos[l][c]+" ");
+	}
+	document.write("<br>");
+}
+
+document.write("<hr></hr>");
+document.write("<h1>Pontuação das Equipes</h1>");
+
+for(i=3;i>-1;i--){
+	document.write("Time: "+time[i]+" / Pontuação: "+pontos[i]+" / Gols Realizados: "+gols[i]+"<br>");
+	document.write("Vitórias: "+vitoria[i]+" / Empates: "+empate[i]+" / Derrotas: "+derrota[i]+"<br>");
+	document.write("Gols Sofridos: "+gs[i]+" / Saldo de Gols: "+saldo[i]+"<hr></hr>");
+}
+
+</script>
