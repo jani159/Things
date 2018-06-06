@@ -1,0 +1,28 @@
+<script>
+//Declaração de Vetores
+var V = [];
+
+//Preenchimento de Vetores
+for(i=0;i<5;i++){
+	V[i] = parseInt(Math.random()*10);
+	document.write("V["+i+"] = "+V[i]+" <br>");
+}
+
+//Ordenamento
+for(i=1;i<5;i++){
+	for(j=0;j<i;j++){
+		if(V[i]<V[j]){
+			var c = V[i];
+			V[i] = V[j];
+			V[j] = c;
+		}
+	}
+}
+
+document.write("<br>");
+//Imprimir
+for(i=4;i>-1;i--){
+	document.write("V["+i+"] = "+V[i]+" <br>");
+}
+
+</script>
