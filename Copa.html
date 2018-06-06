@@ -1,9 +1,13 @@
+
 <meta charset = "UTF-8">
+
 <script>
+
 document.write("<h1> Grupo G - COPA DO MUNDO! </h1>");
 
 //Declaração de Funções 
-function pontuacao(x,y,p,v,d,e,z){ //x = Gols time1, y = Gols time2; p = Vetor pontos; v =  Vetor vitoria; d = Vetor derrota; e = Vetor empate; z = Índice vetor pontos
+function pontuacao(x,y,p,v,d,e,z){ //x = Gols time1, y = Gols time2; p = Vetor pontos; 
+									//v =  Vetor vitoria; d = Vetor derrota; e = Vetor empate; z = Índice vetor pontos
 	if(x>y){ // Condição Vitórias
 		p[z] = p[z] + 3;
 		v[z] = v[z] + 1;
@@ -22,7 +26,6 @@ function pontuacao(x,y,p,v,d,e,z){ //x = Gols time1, y = Gols time2; p = Vetor p
 		}
 	}
 }
-
 function ordenar(V){ //Função que ordenará os vetores
 	for(i=1;i<4;i++){
 		for(j=0;j<i;j++){
@@ -147,12 +150,23 @@ for(l=0;l<6;l++){
 //Traça linha 
 document.write("<hr></hr>");
 document.write("<h1>Pontuação das Equipes</h1>");
-
+var cont = 2;
 //Pontuação e informações dos times	
 for(i=3;i>-1;i--){
-	document.write("Time: "+time[i]+" / Pontuação: "+pontos[i]+" / Gols Realizados: "+gols[i]+"<br>");
-	document.write("Vitórias: "+vitoria[i]+" / Empates: "+empate[i]+" / Derrotas: "+derrota[i]+"<br>");
-	document.write("Gols Sofridos: "+gs[i]+" / Saldo de Gols: "+saldo[i]+"<hr></hr>");
+	document.write("<h3>"+(i-cont)+"° Lugar: </h3> <br>");
+	document.write("Time: "+time[i]+" <br> Pontuação: "+pontos[i]+" <br> Vitórias: "+vitoria[i]+"<br>");
+	document.write("Empates: "+empate[i]+" <br> Derrotas: "+derrota[i]+" <br> Gols Realizados: "+gols[i]+" <br>" );
+	document.write("Gols Sofridos: "+gs[i]+" <br> Saldo de Gols: "+saldo[i]+"<hr></hr>");
+	cont = cont -2;
 }
+
+document.write("<h1>Tabela Final</h1>");
+
+//Tabela de Classificação
+
+document.write("<h3> 1° Lugar:"+time[3]+" </h3> <br>");
+document.write("<h3> 2° Lugar:"+time[2]+" </h3> <br>");
+document.write("<h3> 3° Lugar:"+time[1]+" </h3> <br>");
+document.write("<h3> 4° Lugar:"+time[0]+" </h3> <br>");
 
 </script>
