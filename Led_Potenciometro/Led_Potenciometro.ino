@@ -18,7 +18,7 @@ void setup() {
 
 void loop() {
   potValue = analogRead(0); //Leremos os valores medidos no potenciômetro
-  potValue = map(potValue, 0,1023,0,255); //Temos que mudar o intervalo de valores do pot.
+  potValue = map(potValue, 0,1023,0,255); //Temos que mudar o intervalo de valores do potenciômetro
   Serial.println(potValue); //Imprimimos os valores medidos já no intervalo de (0,255)
 
   //Condições de funcionamento dos LED's
