@@ -1,18 +1,18 @@
 /*LAB-01 MC102  JANIEL LEVI, RA:199414 Turma D*/
 
-/*Receber como entrada 16 números dispostos em duas linhas
-	*1 Linha conterá Bi >=0 
-	*2 Linha conterá Ci >=0
+/*Receber como entrada 16 nÃºmeros dispostos em duas linhas
+	*1 Linha conterÃ¡ Bi >=0 
+	*2 Linha conterÃ¡ Ci >=0
 	*Onde i varia de 1 <= i <= 8
-	*Os 16 números da entrada serão transformados em 8 números Xi, onde inicialmente Xi = Bi e Ci irá condicionar os elementos de Xi	
+	*Os 16 nÃºmeros da entrada serÃ£o transformados em 8 nÃºmeros Xi, onde inicialmente Xi = Bi e Ci irÃ¡ condicionar os elementos de Xi	
 */
 
 /*Algoritimo
 	.Primeiro leremos os 16 elementos 
 	.Alocamos os 8 primeiros elementos para Xi
-	.Colocamos as condições para Ci
+	.Colocamos as condiÃ§Ãµes para Ci
 	.Fazemos um novo Xi
-	.Transformamos Xi no alfabeto (Letra maiúscula)
+	.Transformamos Xi no alfabeto (Letra maiÃºscula)
 */
 
 #include <stdio.h>
@@ -25,9 +25,9 @@ int main(int argc, char** argv){
 		
 	/*printf("Digite os inteiros: ");*/
 	
-	scanf("%d%d%d%d%d%d%d%d",&B1,&B2,&B3,&B4,&B5,&B6,&B7,&B8); /*Salvamos as 8 primeiras entradas em Bi*/
+	scanf("%d%d%d%d%d%d%d%d",&B1,&B2,&B3,&B4,&B5,&B6,&B7,&B8); //Salvamos as 8 primeiras entradas em Bi
 	
-	scanf("%d%d%d%d%d%d%d%d",&C1,&C2,&C3,&C4,&C5,&C6,&C7,&C8);/*Salvamos as 8 primeiras entradadas em Ci*/
+	scanf("%d%d%d%d%d%d%d%d",&C1,&C2,&C3,&C4,&C5,&C6,&C7,&C8); //Salvamos as 8 primeiras entradadas em Ci
 
 	X1 = B1;
 	X2 = B2;
@@ -55,7 +55,7 @@ int main(int argc, char** argv){
 		X8 = X8 + 7;
 		X7 = X7 + 8;
 }
-	if((C1%2 != 0) && (C2%2 != 0) && (C3%2 != 0) && (C4%2 != 0) && (C5%2 != 0) && (C6%2 != 0) && (C7%2 != 0) && (C8%2 != 0)){/*Se nenhum dos Ci for divisível por 2, some 2*C5 a X1*/
+	if((C1%2 != 0) && (C2%2 != 0) && (C3%2 != 0) && (C4%2 != 0) && (C5%2 != 0) && (C6%2 != 0) && (C7%2 != 0) && (C8%2 != 0)){/*Se nenhum dos Ci for divisÃ­vel por 2, some 2*C5 a X1*/
 		X1 = X1 + (2*C5);
 }
 	if(((C3<20) && (C6>20)) || ((C6<20) && (C3>20))){/*Se C3 ou C6 forem menores do que 20, some 6 a X4 e a X5 (EXCLUSIVO)*/
@@ -69,20 +69,20 @@ int main(int argc, char** argv){
 	if((C8!=3) && (C8>=C7)){/*Se C8 for diferente de 3 e menor que C7, some X3 a C2*/
 		X3 = X3 + C2;
 }
-	if((((C1*C2*C3*C4*C5*C6*C7*C8)%5) == 0) && ((((C1*C2*C3*C4*C5*C6*C7*C8)%10) != 0) || (((C1*C2*C3*C4*C5*C6*C7*C8)) == 30))){/*Lembrar de declarar multiplicação dps*/
+	if((((C1*C2*C3*C4*C5*C6*C7*C8)%5) == 0) && ((((C1*C2*C3*C4*C5*C6*C7*C8)%10) != 0) || (((C1*C2*C3*C4*C5*C6*C7*C8)) == 30))){/*Lembrar de declarar multiplicaÃ§Ã£o dps*/
 		X6 = X6 + 1;
 }
 	if((C2==C8) || (C3==C7)){/*Se C2 for igual a C8 ou C3 for igual a C7, adicionamos um a X6*/
 		X6 = X6 + 1;
 }
-/*Espaço é o numero 27 e iremos utilizar a tabela ASCII onde o espaço eh char a = 32;
-	Lembrar de imprimir letras maiúsculas
+/*EspaÃ§o Ã© o numero 27 e iremos utilizar a tabela ASCII onde o espaÃ§o eh char a = 32;
+	Lembrar de imprimir letras maiÃºsculas
 	printf("O novo Xi eh: %d %d %d %d %d %d %d %d \n",X1,X2,X3,X4,X5,X6,X7,X8);//Imprimimos o novo Xi (Apagar)*/
 
-/*Sabemos que Xi tem números maiores que um e menores que 27, e que na tabela ASCII 65 = A 
+/*Sabemos que Xi tem nÃºmeros maiores que um e menores que 27, e que na tabela ASCII 65 = A 
 	e 90 = Z 
 */
- /*Caso Xi esteja entre 0 e 27 eles obedeceram os seguintes if's, caso contrário, serão "descartados"*/
+ /*Caso Xi esteja entre 0 e 27 eles obedeceram os seguintes if's, caso contrÃ¡rio, serÃ£o "descartados"*/
 		if((X1 != 0) && (X1>=1) && (X1<=26)){
 			 X1 = X1 + 64;
 			 printf("%c",X1);
