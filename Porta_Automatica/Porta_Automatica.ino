@@ -48,7 +48,7 @@ void loop(){
     return;
   }
   //Mostraremos a UID no Serial apenas por segurança e confirmação
-  Serial.print("UID:");
+  Serial.print("UID: ");
   String conteudo ="";
   byte letra;
   for (byte i =0; i<mfrc522.uid.size; i++){
