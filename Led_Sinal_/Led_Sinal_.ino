@@ -1,9 +1,9 @@
 int led_verde = 7;
-int led_amarelo = 5; //Declaramos uma variável led1 para ser nosso LED
+int led_amarelo = 5; 
 int led_vermelho = 3; 
 
 void setup() {
-   pinMode(led_verde,OUTPUT); //Fazemos com que essa variável seja do tipo saída
+   pinMode(led_verde,OUTPUT); 
    pinMode(led_amarelo,OUTPUT);
    pinMode(led_vermelho,OUTPUT);
 }
