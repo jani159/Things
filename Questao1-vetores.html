@@ -1,0 +1,20 @@
+<script>
+//Declaração de variáveis
+var notas = [];
+var media;
+var soma = 0;
+var contador = 0;
+
+//Entradas
+while(contador < 10){
+	notas [contador] = parseFloat(prompt("Digite a "+(contador+1)+" nota:"));
+	soma = soma + notas[contador];
+	contador =  contador + 1;
+}
+media = soma / 10;
+
+//Saída
+document.write("A media dos alunos eh igual a: "+media.toFixed(2)+"<br>");
+
+
+</script>
