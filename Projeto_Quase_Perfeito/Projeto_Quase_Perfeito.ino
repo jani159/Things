@@ -29,7 +29,7 @@ void setup(){
   Serial.begin(9600); //Inicia o monitor Serial
   SPI.begin(); //Inicia SPI bus (RFID)
   mfrc522.PCD_Init(); //Inicia o RFID
-  lcd.begin (16,2); //Inicializamos o LCD
+  lcd.begin (16,2); //Ligamos o LCD
   Serial.println("Aproxime o seu cartão do leitor.");
   Serial.println();
   
