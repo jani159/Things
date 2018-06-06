@@ -1,0 +1,42 @@
+<script>
+function achar(vetor,numero){
+	var tamanho;
+	tamanho = vat.length;
+	
+	var indice = 0;
+	while(indice < tamanho){
+		if(vetor[indice] == numero){
+			return true;
+		}
+		else{
+			return false
+		}
+	indice = indice + 1;
+}
+		
+
+//Declaração de variáveis
+var vet = [];
+var num, tamanho;
+indice = 0;
+var existe;
+
+//Entrada
+tamanho = parseInt(prompt("Informe o tamnho do vetor:"));
+num = parseInt(prompt("Digite um numero para conferencia:"));
+while(indice<tamanho){
+	vet[indice] = parseInt(Math.random()*tamanho);
+	document.write("V["+(indice+1)+"] = "+vet[indice]);
+	indice = indice + 1;
+}
+
+//Processamento
+existe = achar(vet,num);
+
+if(existe){
+	document.write("<br> O numero "+numero+" esta presente no vetor");
+}
+else{
+	document.write("<br> O numero "+numero+" nao esta presente no vetor");
+}
+</script>

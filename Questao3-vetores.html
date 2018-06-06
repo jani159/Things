@@ -1,0 +1,28 @@
+<script>
+
+//Declaração de variáveis
+var valores = [];
+var indice = 0;
+var maior, menor;
+
+//Entradas
+while(indice<100){
+	valores[indice] = parseInt(Math.random()*100);
+	document.write("V["+(indice+1)+"] = "+valores[indice]+" ");
+	indice = indice + 1;
+}
+indice = 0;
+maior = valores[0];
+menor = valores[0];
+//Processamento e saída
+while(indice<100){
+	if(valores[indice] < menor){
+		menor = valores[indice];
+	}
+	if(valores[indice] > maior){
+		maior = valores[indice];
+	}
+	indice = indice + 1;
+}
+document.write("<br> O maior valor eh: "+maior+" e o menor eh: "+menor+"<br>");
+</script>

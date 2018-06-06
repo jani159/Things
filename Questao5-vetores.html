@@ -1,0 +1,30 @@
+<script>
+function SomaVet (vet, sum){
+	var vet = [];
+	var indice = 0;
+	var tamanho = vet.length;
+	sum = vet[0];
+	indice = 0;
+	while(indice<tamanho){
+		sum = sum + vet[indice];
+		indice = indice + 1;
+	}
+	document.write("A soma dos elementos o vetor eh: "+sum+"<br>");
+}
+
+//Declaração  de variáveis
+var valores = [];
+var soma;
+var indice = 0;
+var tamanho;
+
+//Entradas
+tamanho =  parseInt(prompt("Diga o tamanho do vetor desejado: "));
+while(indice<tamanho){
+		valores[indice] = parseInt(Math.random()*tamanho);
+		indice =  indice + 1;
+	}
+	
+//Processamento e Saída
+SomaVet (valores, soma);
+</script>

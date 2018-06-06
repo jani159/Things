@@ -1,0 +1,40 @@
+<script>
+//function soma (i, n){
+	//var n, i;
+	
+	
+	
+//Declaração de variáveis
+var v = [];
+var indice = 0;
+var n;
+var soma = 0;
+var incremento = 1;
+var cont = 0;
+
+//Entradas
+n=  parseInt(prompt("Digite um valor para n:"));
+while(indice < n){
+	v[indice] = parseInt(Math.random()*100);
+	if(v[indice] == 0){
+		v[indice] = parseInt(Math.random()*100);
+	}
+	document.write("V["+(indice)+"] = "+v[indice]+"<br>");
+	indice = indice + 1;		
+}
+
+indice=0;
+
+//Processamento e Saída
+while(indice < n){
+	soma = soma + (incremento/v[indice]);
+	document.write(soma.toFixed(2)+"<br>");
+	if(incremento < v[indice]){
+		cont = cont + 1;
+	}
+	indice = indice + 1;
+	incremento = incremento + 1;
+}
+document.write("O valor da serie eh igual a:"+soma.toFixed(2)+"<br>");
+document.write("Numerador menor que denominador: "+cont+"<br>");
+</script>

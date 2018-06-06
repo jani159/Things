@@ -1,0 +1,18 @@
+<script>
+
+//Decaração de variáveis
+var valores = [];
+var indice = 0;
+
+//Entradas
+while(indice<5){
+	valores [indice] = parseInt(prompt("Digite o "+(indice+1)+" valor"));
+	indice = indice + 1;
+}
+indice = 0;
+//Processamento e Saída
+while(indice < 5){
+	document.write("A ordem em que os valores foram escritos foi "+valores[indice]+"<br>");
+	indice = indice + 1;
+}	
+</script>
