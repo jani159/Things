@@ -2,8 +2,8 @@
 //PWM Enable direito: 5
 //Input motor esquerdo : 8 e 12
 //PWM Enable direito: 9
-// Couve = motor esquerdo.
-// Repolho = motor direito.
+// Couve = motor esquerdo
+// Repolho = motor direito
 
 //Inclusao de Bibliotecas
 #include <Ultrasonic.h> // inclusao da biblioteca Ultrasonic
