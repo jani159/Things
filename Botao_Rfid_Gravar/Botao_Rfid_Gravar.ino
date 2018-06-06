@@ -17,8 +17,8 @@ MFRC522::MIFARE_Key key;
  
 void setup()
 {
-  pinMode(pino_botao_le, INPUT);
-  pinMode(pino_botao_gr, INPUT);
+  pinMode(pino_botao_le, INPUT); //Define botão leitura
+  pinMode(pino_botao_gr, INPUT);  //Define botão gravação
   Serial.begin(9600);   //Inicia a serial
   SPI.begin();      //Inicia  SPI bus
   mfrc522.PCD_Init();   //Inicia MFRC522
