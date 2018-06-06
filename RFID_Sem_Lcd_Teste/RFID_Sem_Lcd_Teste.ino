@@ -42,13 +42,13 @@ void loop()
   conteudo.toUpperCase();
   if (conteudo.substring(1) == "22 E0 29 2F") //UID 1 - Chaveiro
   {
-    Serial.println("Cartão. Olá Jani, Bem Vindo!");
+    Serial.println("Chaveiro. Olá Jani, Bem Vindo!");
     Serial.println();
   }
  
-  if (conteudo.substring(1) == "AD FB 42 73") //UID 2 - Cartao
+  if (conteudo.substring(1) == "AD FB 42 73") //UID 2 - Cartão
   {
-    Serial.println("Chaveiro. Olá Jani,Bem Vindo!");
+    Serial.println("Cartão. Olá Jani,Bem Vindo!");
     Serial.println();
   }
   else{
