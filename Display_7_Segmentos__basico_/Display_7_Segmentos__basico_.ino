@@ -1,4 +1,5 @@
-    int A = 12; // Primeiramente setamos os 7 pinos
+  // Primeiramente setamos os 7 pinos
+    int A = 12; 
     int B = 11;
     int C = 10;
     int D = 9;
@@ -7,7 +8,8 @@
     int G = 7;
     
     void setup(){
-      pinMode(A, OUTPUT); // seta todos as portas que estão os leds do display como saída
+    // seta todos as portas que estão os leds do display como saída
+      pinMode(A, OUTPUT); 
       pinMode(B, OUTPUT);
       pinMode(C, OUTPUT);
       pinMode(D, OUTPUT);
