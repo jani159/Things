@@ -1,0 +1,27 @@
+<script>
+//Declaração de funções
+function posneg (N){
+	if(N>0){
+		return 1;
+	}
+	else{
+		if(N<0){
+			return 0;
+		}
+	}
+}
+//Declaração de variáveis
+var num;
+//Entradas
+num = parseInt(prompt("Digite um número:"));
+//Processamento
+posneg(num);
+if(posneg(num) == 1){
+	document.write("O numero eh positivo");
+}
+else{
+	if(posneg(num) == 0){
+		document.write("O numero eh negativo");
+	}
+}
+</script>

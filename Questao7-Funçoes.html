@@ -1,0 +1,14 @@
+<script>
+//Declaração de funções
+function idade(ano, mes, dia){
+tot = ano*365 + mes*30 + dia;
+return tot;
+}
+//Declaração de variáveis e entradas
+var anos =  parseInt(prompt("Digite quantos anos voce tem:"));
+var meses = parseInt(prompt("Digite quantos meses fazem desde o seu ultimo niver:"));
+var dias = parseInt(prompt("Digite quantos dias desde o seu ultimo niver:"));
+//Processamento e Saídas
+idade(anos,meses,dias);
+document.write("Sua idade em dias eh: "+idade(anos,meses,dias));
+</script>

@@ -1,0 +1,51 @@
+<script>
+//Declaração de Funções
+function existe(x,y,z){
+if(((Math.sqrt((x-z)^2))<y<(x+z)) || ((Math.sqrt((x-y)^2))<z<(x+y)) || ((Math.sqrt((y-z)^2))<x<(y+z))){
+	return 4;
+}
+else{
+	return 5;
+}
+}
+function triangulo(x,y,z){
+	if((x == y) && (x == z) && (y == z)){
+		return 1;
+	}
+	else{
+		if((x == y) || (x == z) || (y == z)){
+			return 2;
+		}
+		else{
+			return 3;
+		}
+	}
+}
+//Declaração de variáveis
+var L1,L2,L3;
+//Entradas
+L1 = parseInt(prompt("Digite o lado1"));
+L2 = parseInt(prompt("Digite o lado2"));
+L3 = parseInt(prompt("Digite o lado3"));
+//Processamento e Saídas
+triangulo(L1,L2,L3);
+existe(L1,L2,L3);
+if(existe(L1,L2,L3) == 5){
+	document.write("O triangulo nao existe");
+}
+else{
+	if(triangulo(L1,L2,L3) == 1){
+		document.write("O triangulo existe e eh equilatero.");
+	}
+	else{
+		if(triangulo(L1,L2,L3) == 2){
+		document.write("O triangulo existe e eh isoceles.");
+		}
+		else{
+			if(triangulo(L1,L2,L3) == 3){
+			document.write("O triangulo existe e eh escaleno.");
+			}
+		}
+	}
+}
+</script>

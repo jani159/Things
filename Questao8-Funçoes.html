@@ -1,0 +1,30 @@
+<script>
+//Declaração de funções
+function perfeito(N){
+var i = 1;
+var cont = 0;
+while(i<N){
+	if((N%i) == 0){
+		cont = cont + i;
+	}
+	i = i+1;
+}
+i = 0;
+if(cont == N){
+	return 1;
+}
+else{
+	return 0;
+}
+}
+//Declaração de variáveis e entradas
+var num = parseInt(prompt("Digite um numero para saber se ele eh perfeito:"));
+//Processamento e Saída
+perfeito(num);
+if(perfeito(num) == 1){
+	document.write("O numero "+num+" eh perfeito");
+}
+else{
+	document.write("O numero "+num+" nao eh perfeito");
+}
+</script>

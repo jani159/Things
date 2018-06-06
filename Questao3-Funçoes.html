@@ -1,0 +1,41 @@
+<script>
+//Declaração de funções
+function raizes(a,b,c){
+var delta;
+delta = (b^2) - 4*a*c;
+ if(delta>0){
+	return 1;
+ }
+ else{
+	if(delta == 0){
+		return 0;
+	}
+	else{
+		if(delta <0 ){
+			return -1;
+		}
+	}
+ }
+}
+//Declaração de variaveis
+var A,B,C,D;
+//Entradas
+A = parseInt(prompt("Digite um valor para A"));
+B = parseInt(prompt("Digite um valor para B"));
+C = parseInt(prompt("Digite um valor para C"));
+//Processamento e Saídas
+raizes(A,B,C);
+if(raizes(A,B,C) == 1){
+	document.write("A equacao "+A+"x^2 + "+B+"x + "+C+" = 0 possui duas raizes reais e distintas");
+}
+else{
+	if(raizes(A,B,C) == 0){
+		document.write("A equacao "+A+"x^2 + "+B+"x + "+C+" = 0 possui duas raizes reais e iguais");
+	}
+	else{
+		if(raizes(A,B,C) == -1){
+			document.write("A equacao "+A+"x^2 + "+B+"x + "+C+" = 0 nao possui raizes reais");
+		}
+	}
+}
+</script>

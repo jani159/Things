@@ -1,0 +1,33 @@
+<script>
+//Declaração de funções
+function EhPrimo(N){
+var i = 1;
+var cont = 0;
+while(i<=N){
+	if(N%i == 0){
+		cont = cont +1;
+	}
+	i = i+1;
+}
+if(cont == 2){
+	document.write("O numero "+N+" eh primo <br>");
+}
+else{
+	document.write("O numero "+N+" nao eh primo <br>");
+}
+}
+//Declaração de variáveis e Entradas
+var num = [];
+var inum =0;
+while(inum < 100){
+	num[inum] = inum + 1;
+	inum = inum + 1;
+}	
+inum = 0;
+//Processamento e Saída
+while(num[inum]<=100){
+	EhPrimo(num[inum]);
+	inum = inum +1;
+}
+
+</script>

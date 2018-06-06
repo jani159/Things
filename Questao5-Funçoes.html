@@ -1,0 +1,17 @@
+<script>
+//Declaração de funções
+function fatorial(N){
+var result = 1;
+var i = 0;
+while(i<N){
+	result = (N-i)*result;
+	i = i+1;
+}
+return result;
+}
+//Declara de variáveis e entradas
+var num = parseInt(prompt("Digite um numero para saber o seu fatorial:"));
+//Processamento e Saída
+fatorial(num);
+document.write("O fatorial do numero "+num+" eh : "+fatorial(num));	
+</script>
